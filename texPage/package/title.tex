@@ -1,0 +1,28 @@
+\usepackage[explicit]{titlesec}
+\usepackage[normalem]{ulem}
+
+%\titleformat {\chapter}
+%[frame]
+%{\color{blue}\centering\Huge\bfseries}
+%{}
+%{8pt}
+%{\Huge\thechapter{ }#1\bfseries\filcenter}
+	
+\titleformat {\section}
+{\color{blue}\Large\bfseries}
+{{\textsc{#1}\hfill}}
+{6pt}{}
+
+%\uline{\textsc{%1}\hfill}
+
+\titleformat {\subsection}
+{\color{blue}\Large\bfseries\itshape}
+{\hspace{1cm}\uline{\thesubsection. #1}}
+{4pt}{}
+
+\renewcommand{\thechapter}{\Roman{chapter}}
+\renewcommand{\thesubsection}{\arabic{subsection}}
+
+
+\titlespacing*{\section}
+{0pt}{0ex plus 0ex minus 0ex}{0ex plus 0ex}

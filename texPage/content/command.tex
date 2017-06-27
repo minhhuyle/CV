@@ -1,0 +1,47 @@
+\setlength\parindent{0pt}
+
+
+
+\newcommand{\addFormation}[5]{
+	\begin{minipage}{\textwidth}
+		\smallskip
+		\begin{minipage}[t]{.1\textwidth}
+			\centering\textbf{#1}
+		\end{minipage}
+		\begin{minipage}[t]{.9\textwidth}
+			\textbf{#2} \ifx&#3&\else({#3}) \fi- {#4}
+			\ifx&#5&
+			\else
+			\\
+			%\begin{minipage}{.98\textwidth}
+				{#5}
+			%\end{minipage}
+			\fi
+		\end{minipage}
+	\end{minipage}
+}
+
+	
+\newcommand{\addExperience}[6]{
+	\begin{minipage}{\textwidth}
+		\begin{minipage}[t]{0.12\textwidth}
+			\centering\textbf{#1}
+		\end{minipage}
+		\begin{minipage}[t]{0.88\textwidth}
+			\textbf{#2} ({#3})
+			\\\textbf{#4} ({#5})
+			\\{#6}
+		\end{minipage}
+	\end{minipage}	
+}
+
+\newcommand{\addSkill}[2]{
+	\begin{minipage}[t]{.5\textwidth}
+		\begin{minipage}{.9\textwidth}
+			\textbf{\textit{\underline{#1}}}
+		\end{minipage}
+		\begin{minipage}{.9\textwidth}
+			\textbf{#2}
+		\end{minipage}
+	\end{minipage}
+}
