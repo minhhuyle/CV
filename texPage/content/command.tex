@@ -23,17 +23,28 @@
 
 	
 \newcommand{\addExperience}[6]{
+	\hrule\smallskip
 	\begin{minipage}{\textwidth}
-		\begin{minipage}[t]{0.12\textwidth}
-			\centering\textbf{#1}
+		\begin{minipage}[t]{\textwidth}
+			\textbf{#2} - \textbf{#4} ({#5} à {#3})  \hfill \textbf{#1}
+			\begin{minipage}[t]{\textwidth}
+				\begin{itemize}[noitemsep,topsep=0pt]
+					{#6}
+				\end{itemize}
+			\end{minipage}
 		\end{minipage}
-		\begin{minipage}[t]{0.88\textwidth}
-			\textbf{#2} ({#3})
-			\\\textbf{#4} ({#5})
-			\\{#6}
-		\end{minipage}
-	\end{minipage}	
+	\end{minipage}
+	\smallskip
 }
+
+\newcommand{\addProjet}[4]{
+	\item \textbf{#1} \hfill\ifx&#2&\else({#2})\fi\\
+	\begin{minipage}[t]{.80\textwidth}
+		\ifx&#3&\else\textbf{Projet : }{#3}\fi
+		{#4}
+	\end{minipage}
+}
+
 
 \newcommand{\addSkill}[2]{
 	\begin{minipage}[t]{.5\textwidth}
